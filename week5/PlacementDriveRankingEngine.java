@@ -4,12 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Category C Practice Problem 5: Placement Drive Shortlisting & Ranking Engine (Advanced Tier)
- * 
- * Topics Integrated: Arrays, Method Overloading, Static Methods, Standard Library (Arrays.sort),
- * Constructors & Encapsulation
- */
 public class PlacementDriveRankingEngine {
 
     public static class Candidate implements Comparable<Candidate> {
@@ -36,34 +30,25 @@ public class PlacementDriveRankingEngine {
         }
 
         public double getCompositeScore() {
-            // Composite formula: CGPA * 10 + codingScore / 2
+
             return (cgpa * 10.0) + (codingScore / 2.0);
         }
 
         @Override
         public int compareTo(Candidate other) {
-            // Sort descending by composite score
+
             return Double.compare(other.getCompositeScore(), this.getCompositeScore());
         }
     }
 
-    /**
-     * CGPA-only filter: CGPA >= 7.5 clears directly on academic track record.
-     */
     public static boolean isEligible(double cgpa) {
         return cgpa >= 7.5;
     }
 
-    /**
-     * Combined filter: Borderline CGPA >= 6.5 and strong coding score >= 60.
-     */
     public static boolean isEligible(double cgpa, int codingScore) {
         return cgpa >= 6.5 && codingScore >= 60;
     }
 
-    /**
-     * Shortlists eligible candidates and ranks them by composite score.
-     */
     public static String shortlistAndRank(Candidate[] candidates) {
         if (candidates == null || candidates.length == 0) {
             return "";
@@ -105,3 +90,4 @@ public class PlacementDriveRankingEngine {
         System.out.println("Rankings: " + result);
     }
 }
+

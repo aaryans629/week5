@@ -1,21 +1,7 @@
 package week5;
 
-/**
- * Category C Practice Problem 2: Duplicate Team Name Finder (Easy Tier)
- * 
- * Problem Statement:
- * Hackathon registration is chaotic, and the organizers suspect the same team accidentally
- * submitted their name twice. Write a method that scans the list of registered team names
- * and reports the first duplicate it finds using plain nested loops without Collections.
- */
 public class DuplicateTeamNameFinder {
 
-    /**
-     * Finds the first duplicate team name in the list.
-     *
-     * @param teamNames Array of team names
-     * @return "Duplicate Found: <name>" or "No Duplicates Found"
-     */
     public static String findDuplicateTeam(String[] teamNames) {
         if (teamNames == null || teamNames.length <= 1) {
             return "No Duplicates Found";
@@ -42,3 +28,4 @@ public class DuplicateTeamNameFinder {
         System.out.println("Output: " + findDuplicateTeam(teams2));
     }
 }
+
