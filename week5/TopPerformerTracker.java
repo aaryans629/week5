@@ -1,23 +1,7 @@
 package week5;
 
-/**
- * Category C Assignment Problem 3: Top Performer Tracker (Intermediate Tier)
- * 
- * Topics Integrated: Arrays, Loops, Logical Thinking
- * 
- * Problem Statement:
- * A fantasy league's weekly recap wants to instantly call out the week's standout performer
- * and the week's biggest disappointment, along with how wide the gap between them was —
- * without sorting the entire scoreboard just to read off two numbers.
- */
 public class TopPerformerTracker {
 
-    /**
-     * Finds min, max, and spread in a single pass through the array.
-     *
-     * @param scores Array of scores (length >= 2)
-     * @return Formatted string "Min: X | Max: Y | Spread: Z"
-     */
     public static String findMinMaxSpread(int[] scores) {
         if (scores == null || scores.length < 2) {
             return "Invalid scores array";
@@ -52,3 +36,4 @@ public class TopPerformerTracker {
         System.out.println("Output: " + findMinMaxSpread(scores2));
     }
 }
+

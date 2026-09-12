@@ -4,12 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Category C Assignment Problem 5: Fantasy League Auto-Draft Ranking Engine (Advanced Tier)
- * 
- * Topics Integrated: Arrays, Method Overloading, Static Methods, Standard Library (Arrays.sort),
- * Constructors & Encapsulation
- */
 public class FantasyLeagueAutoDraft {
 
     public static class Player implements Comparable<Player> {
@@ -43,28 +37,19 @@ public class FantasyLeagueAutoDraft {
 
         @Override
         public int compareTo(Player other) {
-            // Rank descending by fantasy points (batting average)
+
             return Double.compare(other.battingAverage, this.battingAverage);
         }
     }
 
-    /**
-     * Experience-only eligibility rule: matches >= 10 qualifies regardless of injury.
-     */
     public static boolean isDraftable(int matchesPlayed) {
         return matchesPlayed >= 10;
     }
 
-    /**
-     * Combined matches-and-fitness rule for newer players: matches >= 5 and not injured.
-     */
     public static boolean isDraftable(int matchesPlayed, boolean injured) {
         return matchesPlayed >= 5 && !injured;
     }
 
-    /**
-     * Filters draftable players, sorts them using Arrays.sort(), and formats the ranking string.
-     */
     public static String draftAndRank(Player[] players) {
         if (players == null || players.length == 0) {
             return "";
@@ -104,3 +89,4 @@ public class FantasyLeagueAutoDraft {
         System.out.println("Draft and Rank Output: " + result);
     }
 }
+

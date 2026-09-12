@@ -1,23 +1,7 @@
 package week5;
 
-/**
- * Category C Assignment Problem 2: Duplicate Player Pick Checker (Easy Tier)
- * 
- * Topics Integrated: Arrays, Strings, Nested Loops
- * 
- * Problem Statement:
- * A glitch in the fantasy app's draft screen occasionally lets a user tap the same player twice
- * before the UI catches up, silently adding them to the lineup twice. Write a method that checks
- * a submitted lineup for a repeated player name before it's accepted.
- */
 public class DuplicatePlayerPickChecker {
 
-    /**
-     * Checks an array of player names for duplicates using plain nested loops without Collections.
-     *
-     * @param playerNames Array of player names in the lineup
-     * @return "Duplicate Found: <name>" or "No Duplicates Found"
-     */
     public static String findDuplicatePick(String[] playerNames) {
         if (playerNames == null || playerNames.length <= 1) {
             return "No Duplicates Found";
@@ -46,3 +30,4 @@ public class DuplicatePlayerPickChecker {
         System.out.println("Output: " + findDuplicatePick(lineup2));
     }
 }
+

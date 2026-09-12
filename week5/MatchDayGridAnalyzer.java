@@ -1,24 +1,7 @@
 package week5;
 
-/**
- * Category C Assignment Problem 4: Match Day Grid Analyzer (Intermediate Tier)
- * 
- * Topics Integrated: 2D Arrays, User-Defined Methods (reused), Loops
- * 
- * Problem Statement:
- * A cricket stats app logs runs scored in every over of every match as a grid —
- * one row per match, one column per over. The app wants to flag which matches were genuine
- * "Power Surge" innings (a high scoring rate throughout) without repeating the same
- * averaging code once per match.
- */
 public class MatchDayGridAnalyzer {
 
-    /**
-     * Private helper to compute the average of a single match's overs.
-     *
-     * @param row Array of runs scored per over in one match
-     * @return Average runs per over
-     */
     static double rowAverage(int[] row) {
         if (row == null || row.length == 0) {
             return 0.0;
@@ -30,13 +13,6 @@ public class MatchDayGridAnalyzer {
         return (double) sum / row.length;
     }
 
-    /**
-     * Classifies matches as "Power Surge" (>= threshold) or "Normal" (< threshold).
-     *
-     * @param runsPerOver 2D jagged array of runs per over for each match
-     * @param threshold   Average threshold
-     * @return Pipe-separated match classifications
-     */
     public static String classifyMatches(int[][] runsPerOver, int threshold) {
         if (runsPerOver == null || runsPerOver.length == 0) {
             return "";
@@ -68,3 +44,4 @@ public class MatchDayGridAnalyzer {
         System.out.println("Output: " + classifyMatches(runs, threshold));
     }
 }
+
